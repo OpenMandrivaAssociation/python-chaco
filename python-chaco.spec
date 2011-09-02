@@ -1,6 +1,6 @@
 %define module	chaco
 %define name	python-%{module}
-%define version	4.0.0
+%define version	4.0.1
 %define release	%mkrel 1
 
 Summary:	Enthought Tool Suite - chaco project
