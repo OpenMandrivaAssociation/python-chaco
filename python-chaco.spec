@@ -1,6 +1,6 @@
 %define module	chaco
 %define name	python-%{module}
-%define version	4.0.1
+%define version	4.1.0
 %define release	%mkrel 1
 
 Summary:	Enthought Tool Suite - chaco project
@@ -8,20 +8,20 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source0:	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
+Source1:	html.tar.gz
 License:	BSD
 Group:		Development/Python
-Url:		http://code.enthought.com/projects/chaco/
+Url:		https://github.com/enthought/chaco/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Obsoletes:	python-enthought-chaco
 Obsoletes:	python-enthought-chaco2
-Requires:	python-traits >= 4.0.0
-Requires:	python-enable >= 4.0.0
+Requires:	python-traits >= 4.1.0
+Requires:	python-enable >= 4.1.0
 Requires:	python-numpy >= 1.1.0
 Requires:	python-reportlab
 BuildRequires:	python-numpy-devel >= 1.1.0
-BuildRequires:	python-traits >= 4.0.0
+BuildRequires:	python-traits >= 4.1.0
 BuildRequires:	python-setuptools >= 0.6c8
-BuildRequires: 	python-sphinx
 
 %description
 Chaco is a Python plotting application toolkit that facilitates
@@ -55,18 +55,15 @@ and exploration.
 
 %build
 
-%__python setup.py build
-pushd docs
-make html
-popd
-
 %install
 %__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
+
+tar zxf %SOURCE1
 
 %clean
 %__rm -rf %{buildroot}
 
 %files -f FILE_LIST
 %defattr(-,root,root)
-%doc *.txt *.rst examples/ docs/*.pdf docs/build/html/
+%doc *.txt *.rst examples/ docs/*.pdf html/
