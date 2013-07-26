@@ -1,2 +1,4 @@
+removed_sources:
+  chaco-4.2.0.tar.gz: 7f35e3d0140250aeb637349f1ce85b8735826763
 sources:
-  "chaco-4.2.0.tar.gz": 7f35e3d0140250aeb637349f1ce85b8735826763
+  chaco-4.3.0.tar.gz: e3aa066fbdeb5c05f4a70491ad060a73a0bc6bb1
