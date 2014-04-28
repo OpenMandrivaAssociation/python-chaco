@@ -47,8 +47,5 @@ kill -9 $XPID
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
 %files
-%doc * *.rst  docs/*.pdf 
+%doc *.rst
 %{py_platsitedir}/%{module}*
-
-
-
