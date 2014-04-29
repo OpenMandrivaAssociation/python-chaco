@@ -6,6 +6,7 @@ Name:		python-%{module}
 Version:	4.4.1
 Release:	1
 Source0:	http://www.enthought.com/repo/ets/chaco-%{version}.tar.gz
+Source1:	%{name}.rpmlintrc
 License:	BSD
 Group:		Development/Python
 Url:		https://github.com/enthought/chaco/
