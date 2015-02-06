@@ -4,7 +4,7 @@ Summary:	Enthought Tool Suite - interactive 2D plotting
 
 Name:		python-%{module}
 Version:	4.4.1
-Release:	1
+Release:	2
 Source0:	http://www.enthought.com/repo/ets/chaco-%{version}.tar.gz
 Source1:	%{name}.rpmlintrc
 License:	BSD
